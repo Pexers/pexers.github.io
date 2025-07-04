@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    {% include head-custom.html %}
+</head>
+
+<body>
+    <!-- Hamburger Menu Button (visible on mobile) -->
+    <button class="hamburger-menu" id="hamburger-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay for mobile menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="wrapper-with-sidebar">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <h3>{{ site.title | default: "Navigation" }}</h3>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+                        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                    </ul>
+                </nav>
+
+                {% if site.github.repository_url %}
+                <div class="sidebar-footer">
+                    <a href="{{ site.github.repository_url }}" class="github-link">
+                        <i class="icon-github"></i> View on GitHub
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section>
+                <div id="title">
+                    <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+                    {% if page.description %}
+                    <p>{{ page.description }}</p>
+                    {% else %}
+                    <p>{{ site.tagline | default: site.description | default: site.github.project_tagline }}</p>
+                    {% endif %}
+                    <hr>
+                </div>
+
+                {{ content }}
+
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburgerToggle = document.getElementById('hamburger-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        hamburgerToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('sidebar-open');
+            overlay.classList.toggle('overlay-active');
+            hamburgerToggle.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', function () {
+            sidebar.classList.remove('sidebar-open');
+            overlay.classList.remove('overlay-active');
+            hamburgerToggle.classList.remove('active');
+        });
+
+        // Close sidebar when clicking on a link (mobile)
+        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('sidebar-open');
+                    overlay.classList.remove('overlay-active');
+                    hamburgerToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

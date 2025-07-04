@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: sidebar
 title: Welcome to My GitHub Pages Site
+description: A Jekyll site with a beautiful sidebar navigation
 ---
 
 # Welcome to My Site

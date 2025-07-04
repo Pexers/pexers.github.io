@@ -3,6 +3,5 @@
     "forwardPorts": [
         4000,
         35729
-    ],
-    "postCreateCommand": "jekyll serve --livereload"
+    ]
 }
