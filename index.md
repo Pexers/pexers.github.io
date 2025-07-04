@@ -8,6 +8,13 @@ description: A Jekyll site with a beautiful sidebar navigation
 
 This is the homepage of my GitHub Pages site using the Midnight theme.
 
+<div class="card-container">
+    <a href="{{ '/portfolio' | relative_url }}" class="card">
+        <h3>My Portfolio</h3>
+        <p>Explore my projects, skills, and professional experience. Click to see my latest work and achievements.</p>
+    </a>
+</div>
+
 ## About
 
 Add some information about yourself or your project here.

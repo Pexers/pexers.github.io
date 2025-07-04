@@ -6,23 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Projects | My GitHub Pages Site</title>
+<title>My Portfolio | My GitHub Pages Site</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Projects" />
+<meta property="og:title" content="My Portfolio" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Showcase of my work and projects" />
 <meta property="og:description" content="Showcase of my work and projects" />
-<link rel="canonical" href="http://localhost:4000/projects.html" />
-<meta property="og:url" content="http://localhost:4000/projects.html" />
+<link rel="canonical" href="http://localhost:4000/portfolio.html" />
+<meta property="og:url" content="http://localhost:4000/portfolio.html" />
 <meta property="og:site_name" content="My GitHub Pages Site" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Projects" />
+<meta property="twitter:title" content="My Portfolio" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Showcase of my work and projects","headline":"Projects","url":"http://localhost:4000/projects.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Showcase of my work and projects","headline":"My Portfolio","url":"http://localhost:4000/portfolio.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/assets/js/respond.js"></script>
@@ -70,20 +71,21 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-content">
                 <div class="sidebar-header">
-                    <h3>My GitHub Pages Site</h3>
+                    <div class="github-user-info">
+                        <a href="https://github.com/Pexers" target="_blank"
+                            class="github-avatar-link">
+                            <img src="https://github.com/Pexers.png"
+                                alt="GitHub Avatar" class="github-avatar">
+                        </a>
+                        <span class="github-username">Pexers</span>
+                    </div>
                 </div>
 
                 <nav class="sidebar-nav">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/projects">Projects</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/"><i class="fas fa-home"></i> HOME</a></li>
                     </ul>
                 </nav>
-
-                
             </div>
         </aside>
 
@@ -91,46 +93,39 @@
         <main class="main-content">
             <section>
                 <div id="title">
-                    <h1>Projects</h1>
+                    <h1>My Portfolio</h1>
                     
                     <p>Showcase of my work and projects</p>
                     
                     <hr>
                 </div>
 
-                <h1 id="projects">Projects</h1>
+                <h1 id="my-portfolio">My Portfolio</h1>
 
-<p>Here are some of the projects I’ve been working on:</p>
+<p>Welcome to my portfolio page! Here you can find information about my projects and work.</p>
 
-<h2 id="jekyll-sidebar-theme">Jekyll Sidebar Theme</h2>
-<p>A custom sidebar implementation for Jekyll sites using the Midnight theme.</p>
+<h2 id="featured-projects">Featured Projects</h2>
 
-<p><strong>Features:</strong></p>
+<h3 id="project-1">Project 1</h3>
+<p>Description of your first project…</p>
+
+<h3 id="project-2">Project 2</h3>
+<p>Description of your second project…</p>
+
+<h3 id="project-3">Project 3</h3>
+<p>Description of your third project…</p>
+
+<h2 id="skills">Skills</h2>
+
 <ul>
-  <li>Responsive design</li>
-  <li>Easy navigation</li>
-  <li>Dark theme with green accents</li>
-  <li>Mobile-friendly</li>
+  <li>Programming Languages</li>
+  <li>Frameworks</li>
+  <li>Tools &amp; Technologies</li>
 </ul>
 
-<h2 id="github-pages-portfolio">GitHub Pages Portfolio</h2>
-<p>A portfolio site built with Jekyll and hosted on GitHub Pages.</p>
+<h2 id="experience">Experience</h2>
 
-<p><strong>Technologies:</strong></p>
-<ul>
-  <li>Jekyll</li>
-  <li>SCSS</li>
-  <li>GitHub Pages</li>
-  <li>Responsive CSS</li>
-</ul>
-
-<h2 id="other-projects">Other Projects</h2>
-
-<p>More projects will be added here as they are completed.</p>
-
-<hr />
-
-<p><em>Check back regularly for updates!</em></p>
+<p>Add your professional experience here…</p>
 
 
             </section>
@@ -143,16 +138,41 @@
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebar-overlay');
 
+        function checkWindowSize() {
+            if (window.innerWidth > 768) {
+                // Desktop view - hide hamburger button and ensure sidebar is visible
+                hamburgerToggle.style.display = 'none';
+                sidebar.classList.remove('sidebar-open');
+                overlay.classList.remove('overlay-active');
+                hamburgerToggle.classList.remove('active');
+            } else {
+                // Mobile view - show hamburger button only if sidebar is closed
+                if (!sidebar.classList.contains('sidebar-open')) {
+                    hamburgerToggle.style.display = 'flex';
+                }
+            }
+        }
+
+        // Check window size on load and resize
+        checkWindowSize();
+        window.addEventListener('resize', checkWindowSize);
+
         hamburgerToggle.addEventListener('click', function () {
-            sidebar.classList.toggle('sidebar-open');
-            overlay.classList.toggle('overlay-active');
-            hamburgerToggle.classList.toggle('active');
+            sidebar.classList.add('sidebar-open');
+            overlay.classList.add('overlay-active');
+            hamburgerToggle.classList.add('active');
+            // Hide hamburger button when sidebar is open
+            hamburgerToggle.style.display = 'none';
         });
 
         overlay.addEventListener('click', function () {
             sidebar.classList.remove('sidebar-open');
             overlay.classList.remove('overlay-active');
             hamburgerToggle.classList.remove('active');
+            // Show hamburger button when sidebar is closed (only on mobile)
+            if (window.innerWidth <= 768) {
+                hamburgerToggle.style.display = 'flex';
+            }
         });
 
         // Close sidebar when clicking on a link (mobile)
@@ -163,8 +183,19 @@
                     sidebar.classList.remove('sidebar-open');
                     overlay.classList.remove('overlay-active');
                     hamburgerToggle.classList.remove('active');
+                    // Show hamburger button when sidebar is closed
+                    hamburgerToggle.style.display = 'flex';
                 }
             });
+        });
+
+        // Set active menu item based on current page
+        const currentPath = window.location.pathname;
+        sidebarLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (currentPath === linkPath || (currentPath === '/' && linkPath.endsWith('/'))) {
+                link.classList.add('active');
+            }
         });
     </script>
 </body>

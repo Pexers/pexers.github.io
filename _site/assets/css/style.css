@@ -902,9 +902,9 @@ body {
 }
 
 .sidebar {
-  width: 280px;
-  background: linear-gradient(#373737, #212121);
-  border-right: 1px solid #444;
+  width: 250px;
+  background: #1e1e1e;
+  border-right: 1px solid #292929;
   position: fixed;
   top: 0;
   left: 0;
@@ -918,12 +918,57 @@ body {
 }
 
 .sidebar-header h3 {
-  color: #b5e853;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #292929;
   padding-bottom: 10px;
+}
+
+.github-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid #292929;
+  margin-bottom: 20px;
+}
+
+.github-avatar-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.github-avatar-link:hover {
+  transform: scale(1.1);
+}
+
+.github-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid #292929;
+  transition: border-color 0.3s ease;
+  display: block;
+}
+
+.github-avatar:hover {
+  border-color: #868686;
+}
+
+.github-user-info i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #868686;
+}
+
+.github-user-info .github-username {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .sidebar-nav ul {
@@ -939,51 +984,60 @@ body {
 .sidebar-nav a {
   display: block;
   padding: 12px 15px;
-  color: #d0d0d0;
+  color: #868686;
   text-decoration: none;
   border-radius: 4px;
   transition: all 0.3s ease;
   font-size: 14px;
 }
 
+.sidebar-nav a i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  color: #868686;
+  transition: color 0.3s ease;
+}
+
 .sidebar-nav a:hover {
-  background: #444;
-  color: #b5e853;
-  transform: translateX(5px);
+  background: #262626;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.sidebar-nav a:hover i {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Keep hover background when menu is selected/active */
+.sidebar-nav a.active,
+.sidebar-nav a[aria-current=page] {
+  background: #262626;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.sidebar-nav a.active i,
+.sidebar-nav a[aria-current=page] i {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .sidebar-footer {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #444;
-}
-
-.github-link {
-  display: block;
-  padding: 10px;
-  background: #333;
-  color: #b5e853;
-  text-decoration: none;
-  border-radius: 4px;
-  text-align: center;
-  transition: background 0.3s ease;
-}
-
-.github-link:hover {
-  background: #444;
+  border-top: 1px solid #292929;
 }
 
 .main-content {
-  margin-left: 280px;
+  margin-left: 250px;
   flex: 1;
   padding: 20px;
   min-height: 100vh;
-  width: calc(100% - 280px);
+  width: calc(100% - 250px);
   max-width: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: rgb(27, 27, 30);
 }
 
 .main-content section {
@@ -1015,7 +1069,7 @@ body {
   top: 20px;
   left: 20px;
   z-index: 1100;
-  background: #373737;
+  background: #232328;
   border: none;
   border-radius: 4px;
   padding: 10px;
@@ -1030,7 +1084,7 @@ body {
 }
 
 .hamburger-menu:hover {
-  background: #444;
+  background: #262626;
   transform: scale(1.05);
 }
 
@@ -1038,7 +1092,7 @@ body {
   display: block;
   width: 20px;
   height: 2px;
-  background: #b5e853;
+  background: #787878;
   margin: 2px 0;
   transition: all 0.3s ease;
   border-radius: 1px;
@@ -1072,6 +1126,65 @@ body {
 .sidebar-overlay.overlay-active {
   display: block;
   opacity: 1;
+}
+
+/* Card styles for home page */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  background: linear-gradient(135deg, #373737, #2a2a2a);
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  border-color: #ffffff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  transition: left 0.5s ease;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card h3 {
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.card p {
+  color: #d0d0d0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Responsive design */

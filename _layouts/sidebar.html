@@ -7,6 +7,7 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
@@ -36,26 +37,21 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-content">
                 <div class="sidebar-header">
-                    <h3>{{ site.title | default: "Navigation" }}</h3>
+                    <div class="github-user-info">
+                        <a href="https://github.com/{{ site.github_username | default: 'github' }}" target="_blank"
+                            class="github-avatar-link">
+                            <img src="https://github.com/{{ site.github_username | default: 'github' }}.png"
+                                alt="GitHub Avatar" class="github-avatar">
+                        </a>
+                        <span class="github-username">{{ site.github_username | default: "username" }}</span>
+                    </div>
                 </div>
 
                 <nav class="sidebar-nav">
                     <ul>
-                        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                        <li><a href="{{ '/about' | relative_url }}">About</a></li>
-                        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-                        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-                        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                        <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> HOME</a></li>
                     </ul>
                 </nav>
-
-                {% if site.github.repository_url %}
-                <div class="sidebar-footer">
-                    <a href="{{ site.github.repository_url }}" class="github-link">
-                        <i class="icon-github"></i> View on GitHub
-                    </a>
-                </div>
-                {% endif %}
             </div>
         </aside>
 
@@ -84,16 +80,41 @@
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebar-overlay');
 
+        function checkWindowSize() {
+            if (window.innerWidth > 768) {
+                // Desktop view - hide hamburger button and ensure sidebar is visible
+                hamburgerToggle.style.display = 'none';
+                sidebar.classList.remove('sidebar-open');
+                overlay.classList.remove('overlay-active');
+                hamburgerToggle.classList.remove('active');
+            } else {
+                // Mobile view - show hamburger button only if sidebar is closed
+                if (!sidebar.classList.contains('sidebar-open')) {
+                    hamburgerToggle.style.display = 'flex';
+                }
+            }
+        }
+
+        // Check window size on load and resize
+        checkWindowSize();
+        window.addEventListener('resize', checkWindowSize);
+
         hamburgerToggle.addEventListener('click', function () {
-            sidebar.classList.toggle('sidebar-open');
-            overlay.classList.toggle('overlay-active');
-            hamburgerToggle.classList.toggle('active');
+            sidebar.classList.add('sidebar-open');
+            overlay.classList.add('overlay-active');
+            hamburgerToggle.classList.add('active');
+            // Hide hamburger button when sidebar is open
+            hamburgerToggle.style.display = 'none';
         });
 
         overlay.addEventListener('click', function () {
             sidebar.classList.remove('sidebar-open');
             overlay.classList.remove('overlay-active');
             hamburgerToggle.classList.remove('active');
+            // Show hamburger button when sidebar is closed (only on mobile)
+            if (window.innerWidth <= 768) {
+                hamburgerToggle.style.display = 'flex';
+            }
         });
 
         // Close sidebar when clicking on a link (mobile)
@@ -104,8 +125,19 @@
                     sidebar.classList.remove('sidebar-open');
                     overlay.classList.remove('overlay-active');
                     hamburgerToggle.classList.remove('active');
+                    // Show hamburger button when sidebar is closed
+                    hamburgerToggle.style.display = 'flex';
                 }
             });
+        });
+
+        // Set active menu item based on current page
+        const currentPath = window.location.pathname;
+        sidebarLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (currentPath === linkPath || (currentPath === '/' && linkPath.endsWith('/'))) {
+                link.classList.add('active');
+            }
         });
     </script>
 </body>
