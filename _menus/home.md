@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Welcome to My GitHub Pages Site
-description: A Jekyll site with a beautiful sidebar navigation
+title: HOME
+icon: "fas fa-home"
+order: 1
+permalink: /
 ---
 
-# Welcome to My Siteeee
+# Welcome to My Site
 
 This is the homepage of my GitHub Pages site using the Midnight theme.
 

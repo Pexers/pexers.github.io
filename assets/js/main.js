@@ -6,7 +6,8 @@
 class SidebarNavigation {
     constructor() {
         // CSS custom properties for responsive breakpoints
-        this.breakpoint = 768;
+        this.breakpoint = parseInt(getComputedStyle(document.documentElement)
+            .getPropertyValue('--mobile-breakpoint')) || 768;
 
         // Cache DOM elements
         this.elements = {
@@ -99,8 +100,7 @@ class SidebarNavigation {
 
             // Show/hide hamburger button based on state
             if (hamburger) {
-                hamburger.style.display = isMobile && !isOpen ? 'flex' :
-                    isMobile && isOpen ? 'none' : 'none';
+                hamburger.style.display = isMobile ? (isOpen ? 'none' : 'flex') : 'none';
             }
         });
     }
@@ -171,16 +171,18 @@ class SidebarNavigation {
         const currentPath = window.location.pathname;
 
         this.elements.navLinks.forEach(link => {
-            const linkPath = new URL(link.href).pathname;
-            const isActive = currentPath === linkPath ||
-                (currentPath === '/' && linkPath.endsWith('/'));
+            try {
+                const linkPath = new URL(link.href).pathname;
+                const isActive = currentPath === linkPath;
 
-            link.classList.toggle('active', isActive);
+                link.classList.toggle('active', isActive);
+                link.toggleAttribute('aria-current', isActive);
 
-            if (isActive) {
-                link.setAttribute('aria-current', 'page');
-            } else {
-                link.removeAttribute('aria-current');
+                if (isActive) {
+                    link.setAttribute('aria-current', 'page');
+                }
+            } catch (error) {
+                console.warn('Invalid URL found in navigation:', link.href);
             }
         });
     }
@@ -188,16 +190,25 @@ class SidebarNavigation {
     addSmoothScrolling() {
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href').substring(1);
+            anchor.addEventListener('click', (e) => {
+                const targetId = anchor.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
                     e.preventDefault();
+
+                    // Close sidebar on mobile when navigating to anchor
+                    if (this.state.isMobile && this.state.isOpen) {
+                        this.closeSidebar();
+                    }
+
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
+
+                    // Update focus for accessibility
+                    targetElement.focus({ preventScroll: true });
                 }
             });
         });
@@ -218,10 +229,18 @@ class SidebarNavigation {
 }
 
 // Performance optimization: Initialize when DOM is ready
+const initSidebar = () => {
+    try {
+        new SidebarNavigation();
+    } catch (error) {
+        console.error('Failed to initialize sidebar navigation:', error);
+    }
+};
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => new SidebarNavigation());
+    document.addEventListener('DOMContentLoaded', initSidebar);
 } else {
-    new SidebarNavigation();
+    initSidebar();
 }
 
 // Add CSS custom properties for dynamic theming
