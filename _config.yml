@@ -7,3 +7,8 @@ description: A simple Jekyll site using the Midnight theme
 url: "https://pexers.github.io"
 baseurl: ""
 github_username: Pexers
+
+collections:
+  cards:
+    output: true
+    permalink: /:name/

@@ -1,7 +1,8 @@
 ---
-layout: sidebar
+layout: default
 title: My Portfolio
-description: Showcase of my work and projects
+description: Explore my projects, skills, and professional experience. Click to see my latest work and achievements.
+date: 2025-07-05
 ---
 
 # My Portfolio

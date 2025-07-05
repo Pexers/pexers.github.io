@@ -1,18 +1,21 @@
 ---
-layout: sidebar
+layout: default
 title: Welcome to My GitHub Pages Site
 description: A Jekyll site with a beautiful sidebar navigation
 ---
 
-# Welcome to My Site
+# Welcome to My Siteeee
 
 This is the homepage of my GitHub Pages site using the Midnight theme.
 
 <div class="card-container">
-    <a href="{{ '/portfolio' | relative_url }}" class="card">
-        <h3>My Portfolio</h3>
-        <p>Explore my projects, skills, and professional experience. Click to see my latest work and achievements.</p>
+{%- assign sorted_cards = site.cards | sort: 'date' | reverse -%}
+{%- for card in sorted_cards -%}
+    <a href="{{ card.url | relative_url }}" class="card">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
     </a>
+{%- endfor -%}
 </div>
 
 ## About
