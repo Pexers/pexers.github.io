@@ -8,9 +8,13 @@
     --mobile-breakpoint: 768px;
     --sidebar-bg: #1e1e1e;
     --sidebar-border: #292929;
-    --content-bg: linear-gradient(#2a2a29, #1c1c1c);
-    --text-primary: rgba(255, 255, 255, 0.95);
-    --text-secondary: rgba(255, 255, 255, 0.8);
+    --nav-link-hover-bg: rgba(255, 255, 255, 0.1);
+    --nav-link-gradient: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    --card-bg: var(--sidebar-bg);
+    --card-hover-bg: var(--nav-link-hover-bg);
+    --content-bg: #171718;
+    --text-primary: rgba(242, 242, 242, 0.904);
+    --text-secondary: rgba(255, 255, 255, 0.646);
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
     --shadow-light: rgba(0, 0, 0, 0.1);
@@ -18,8 +22,8 @@
     --border-radius: 8px;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
+    --spacing-md: 1.3rem;
+    --spacing-lg: 1.3rem;
 }
 
 /* Modern CSS Reset */
@@ -176,7 +180,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: var(--nav-link-gradient);
     transition: left var(--transition-medium);
 }
 
@@ -194,7 +198,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--nav-link-hover-bg);
     color: var(--text-primary);
     transform: translateX(4px);
     outline: none;
@@ -357,29 +361,53 @@ body {
 /* Enhanced card styles */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     margin: var(--spacing-lg) 0;
+    justify-items: center;
 }
 
 .card {
-    background: linear-gradient(135deg, #373737, #2a2a2a);
+    background: var(--card-bg);
     border: 2px solid var(--sidebar-border);
     border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
     transition: all var(--transition-medium);
     cursor: pointer;
     position: relative;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
     box-shadow: 0 6px 12px var(--shadow-medium);
+    width: 100%;
+    max-width: 700px;
+    justify-self: center;
+}
+
+.card-content {
+    flex: 1;
+    padding: var(--spacing-sm) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image {
+    flex-shrink: 0;
+    width: 110px;
+    height: 135px;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    border: 2px solid var(--sidebar-border);
 }
 
 .card:hover,
 .card:focus {
-    transform: translateY(-8px) scale(1.02);
+    background: var(--card-hover-bg);
+    transform: translateY(-2px) scale(1.0);
     box-shadow: 0 12px 24px var(--shadow-medium);
     border-color: var(--text-primary);
     text-decoration: none;
@@ -393,9 +421,9 @@ body {
     top: 0;
     left: -100%;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg, transparent, var(--text-primary), transparent);
-    transition: left 0.6s ease;
+    transition: left 0.35s ease;
 }
 
 .card:hover::before,
@@ -405,16 +433,26 @@ body {
 
 .card h3 {
     color: var(--text-primary);
-    margin: 0 0 var(--spacing-sm) 0;
+    margin: 0 0 var(--spacing-xs) 0;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 550;
 }
 
 .card p {
     color: var(--text-secondary);
     margin: 0;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+.card small {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 /* Responsive Design - Mobile First */
@@ -423,7 +461,7 @@ body {
         --sidebar-width: 280px;
         --spacing-sm: 0.75rem;
         --spacing-md: 1rem;
-        --spacing-lg: 1.5rem;
+        --spacing-lg: 1.3rem;
     }
 
     .layout-container {
@@ -475,7 +513,7 @@ body {
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .card-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr;
     }
     
     .main-content {
@@ -494,7 +532,7 @@ body {
     }
     
     .card-container {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
