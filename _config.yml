@@ -3,7 +3,7 @@ plugins:
   - jekyll-remote-theme
 
 title: My GitHub Pages Site
-description: A simple Jekyll site using the Midnight theme
+description: Guides, electronics projects, and repair tips
 url: "https://pexers.github.io"
 baseurl: ""
 github_username: Pexers

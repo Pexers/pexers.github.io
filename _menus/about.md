@@ -7,4 +7,10 @@ order: 2
 
 # About
 
-Welcome to my portfolio page! Here you can find information about my projects and work.
+I'm Pedro Rodrigues, from Lisbon, Portugal.
+
+I'm truly passionate about building efficient, secure and maintainable software systems. I also find joy in helping out fellow developers through contributions to open-source projects, so don't hesitate to reach out! 🤓
+
+**Languages of choice:** `Java`, `Kotlin`, `C#`, `Go`, `Python`, `JavaScript`.
+
+**Main topics of interest:** `Cloud Computing`, `DevOps`, `Distributed Systems` and `Cyber/Network Security`.

@@ -55,7 +55,7 @@
                             aria-label="View {{ site.github_username | default: 'GitHub' }} profile">
                             <img src="https://github.com/{{ site.github_username | default: 'github' }}.png"
                                 alt="{{ site.github_username | default: 'GitHub' }} avatar" class="github-avatar"
-                                loading="lazy" width="80" height="80">
+                                width="80" height="80">
                         </a>
                         <h2 class="github-username">{{ site.github_username | default: "username" }}</h2>
                     </div>
@@ -96,6 +96,10 @@
                 <div class="page-content">
                     {{ content }}
                 </div>
+                <div class="line"></div>
+                <footer class="copyright">© {{ 'now' | date: '%Y' }} <a
+                        href="https://github.com/{{ site.github_username | default: 'github' }}" target="_blank"
+                        rel="noopener noreferrer">Pexers</a>. Some rights reserved.</footer>
             </article>
         </main>
     </div>

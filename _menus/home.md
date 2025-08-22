@@ -6,9 +6,9 @@ order: 1
 permalink: /
 ---
 
-# Welcome to My Site
+# Welcome to my GitHub Pages website
 
-This is the homepage of my GitHub Pages site using the Midnight theme.
+Here you'll find guides, hands-on electronics projects, and practical tips for repairing and upgrading devices. Explore the latest cards below, or browse the menu for more resources and information.
 
 <div class="card-container">
 {%- assign sorted_cards = site.cards | sort: 'date' | reverse -%}
@@ -23,17 +23,3 @@ This is the homepage of my GitHub Pages site using the Midnight theme.
 </a>
 {%- endfor -%}
 </div>
-
-## About
-
-Add some information about yourself or your project here.
-
-## Features
-
-- Built with Jekyll
-- Using the Midnight theme
-- Hosted on GitHub Pages
-
-## Contact
-
-You can reach me at [your-email@example.com](mailto:your-email@example.com)
