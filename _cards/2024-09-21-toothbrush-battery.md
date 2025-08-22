@@ -59,10 +59,10 @@ Notice the small spring located at the bottom of the mechanism, inside the coppe
     <img src="https://github.com/user-attachments/assets/450a03fb-8050-4446-918f-7a5aa61ed61e" width="350">
 </p>
 
-3. Carefully desolder the four metal tabs that secure both the PCB and the battery cell in place. Two of these tabs connect to the motor, while the other two connect to the positive and negative terminals of the battery cell.
+1. Carefully desolder the four metal tabs that secure both the PCB and the battery cell in place. Two of these tabs connect to the motor, while the other two connect to the positive and negative terminals of the battery cell.
     - The ideal temperature should be between 175°C and 200°C (about 350°F to 400°F).
-4. Gently bend the negative tab upwards by about 45 degrees. This will release the PCB, allowing you to carefully lift it away from the rest of the mechanism without applying excessive force.
-5. There are small clips near the top of the PCB, as shown in the image below. You need to gently pry these clips holding the PCB in place using a small flathead screwdriver or plastic spudger.
+2. Gently bend the negative tab upwards by about 45 degrees. This will release the PCB, allowing you to carefully lift it away from the rest of the mechanism without applying excessive force.
+3. There are small clips near the top of the PCB, as shown in the image below. You need to gently pry these clips holding the PCB in place using a small flathead screwdriver or plastic spudger.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/cdb38da9-460c-407d-829c-471424046781" width="200" >
@@ -78,8 +78,8 @@ Once all tabs and clips are free, the PCB should come off easily together with t
     <h3>Step 4: Solder Tabs Onto the New Cell</h3>
 </div>
 
-6. Using the pliers, detach the metal tabs from the old battery cell. These tabs may be firmly attached, so use gentle but steady force to avoid bending or damaging them. Reusing the original tabs ensures a perfect fit in the toothbrush mechanism.
-7. Clean the tabs if necessary, then solder them onto the terminals of the new battery cell. Make sure the tabs are securely attached and positioned correctly to match the original orientation.
+1. Using the pliers, detach the metal tabs from the old battery cell. These tabs may be firmly attached, so use gentle but steady force to avoid bending or damaging them. Reusing the original tabs ensures a perfect fit in the toothbrush mechanism.
+2. Clean the tabs if necessary, then solder them onto the terminals of the new battery cell. Make sure the tabs are securely attached and positioned correctly to match the original orientation.
 
 <div class="step">
     <h3>Step 5: Re-attach the PCB</h3>
@@ -90,8 +90,8 @@ Once all tabs and clips are free, the PCB should come off easily together with t
     <img src="https://github.com/user-attachments/assets/61eb1909-8123-4631-917c-9b0f7288358b" width="250" height="280">
 </p>
 
-8. With the tabs securely attached to the new battery, carefully position the PCB back onto the mechanism. Align the metal tabs with their original locations on the PCB and battery terminals.
-9. Re-solder the four joints that were previously desoldered: two for the motor and two for the battery terminals.
+1. With the tabs securely attached to the new battery, carefully position the PCB back onto the mechanism. Align the metal tabs with their original locations on the PCB and battery terminals.
+2. Re-solder the four joints that were previously desoldered: two for the motor and two for the battery terminals.
 
 <div class="step">
     <h3>Step 6: Reassemble</h3>
@@ -101,9 +101,8 @@ Once all tabs and clips are free, the PCB should come off easily together with t
 <img src="https://github.com/user-attachments/assets/306b9684-8287-428f-bd5b-e59de4491a2a" width="280" >
 </p>
 
-10. Carefully slide the inner mechanism back into the main body of the toothbrush, ensuring that the spring and all components are properly aligned. If everything looks good, reattach the end cap.
+Carefully slide the inner mechanism back into the main body of the toothbrush, ensuring that the spring and all components are properly aligned. If everything looks good, reattach the end cap.
 
 Once reassembled, test the toothbrush to confirm that it powers on and operates correctly. If it does not turn on, check the battery orientation, tab connections, and solder joints for any issues.
 
 **Congratulations!** You have successfully replaced the battery and extended the life of your electric toothbrush. 👏
-
