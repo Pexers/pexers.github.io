@@ -10,14 +10,14 @@ image: https://github.com/user-attachments/assets/53c9d093-df38-4d2c-8c56-df0aae
 
 In March 2022, I purchased my Oral-B Vitality 100 CrossAction electric toothbrush. After two years of daily use, the battery began requiring frequent recharging, often several times a week. Instead of spending arout 20€ on a new toothbrush, I chose to replace the battery myself with a brand new Eneloop NiMh cell, which would cost you roughly 3€ a piece. This way we're able to save money, and most importantly, contribute to less electronic waste.
 
-### What you'll need
+### What You'll Need
 
- - 🔋 Replacement battery (e.g., Eneloop NiMh cell, AA size)
- - 🔧 Combination pliers
- - 🧰 Soldering equipment (soldering iron, solder and desoldering pump)
- - ✨ Clean workspace
+ - 🔋 Replacement Battery (e.g., Eneloop NiMh cell, AA size)
+ - 🔧 Combination Pliers
+ - 🧰 Soldering Equipment (Soldering Iron, Solder and Desoldering Pump)
+ - ✨ Clean Workspace
 
-# Step-by-step Guide
+# Step-by-Step Guide
 
 <div class="step">
     <h3>Step 1: Disassemble the Toothbrush</h3>
@@ -82,7 +82,7 @@ Once all tabs and clips are free, the PCB should come off easily together with t
 2. Clean the tabs if necessary, then solder them onto the terminals of the new battery cell. Make sure the tabs are securely attached and positioned correctly to match the original orientation.
 
 <div class="step">
-    <h3>Step 5: Re-attach the PCB</h3>
+    <h3>Step 5: Re-Attach the PCB</h3>
 </div>
 
 <p align="center">
