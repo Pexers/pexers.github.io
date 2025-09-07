@@ -19,7 +19,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
- - 📡 PS RemotePlay v5.5 for Windows (search for "_Reddit PS RemotePlay v5.5_" to find a download link)
+ - 📡 PS RemotePlay v5.5 for Windows (recommended version)
  - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
 # Step-by-Step Guide
@@ -82,10 +82,10 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 5. Once you're happy with your configuration, click on _Start_.
 
 <div class="step">
-    <h3>Step 3: Patch RemotePlay</h3>
+    <h3>Step 3: Install and Patch PS RemotePlay</h3>
 </div>
 
-1. Download and install PS RemotePlay v5.5. You can usually find a download link in online forums, just search for "_Reddit PS RemotePlay v5.5_". The version I use is: `v5.5.0.8250`
+1. Download and install PS RemotePlay v5.5 (recommended). You can usually find a download link in online forums, just search for "_Reddit PS RemotePlay v5.5_". Earlier versions should still work, but may require extra manual steps. The version I use is: `v5.5.0.8250`
 2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch PS RemotePlay to the latest version.
 
 The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new code every time.
@@ -100,13 +100,13 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
 4. Once in-game, run the DS4Emulator executable. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width="500">
+    <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width=600">
 </p>
 
 **Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
 
 <div class="step">
-    <h3>Step 5: Play! 🏁</h3>
+    <h3>Step 5: Race! 🏁</h3>
 </div>
 
 <p align="center">
