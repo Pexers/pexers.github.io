@@ -18,22 +18,36 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - 🖥️ Windows PC
  - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
- - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator) (converts XInput to DualShock 4)
- - ⚙️ [RemotePlay Version Patcher](https://github.com/streamingtools/remoteplay-version-patcher)
+ - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
  - 📡 [RemotePlay v5.5.0.8250](https://remoteplay.dl.playstation.net/remoteplay/lang/en/index.html) for Windows
+ - ⚙️ [RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
 # Step-by-Step Guide
 
 <div class="step">
-    <h3>Step 1: Install and Configure XOutput</h3>
+    <h3>Step 1: Install the Steering Wheel and Pedals</h3>
 </div>
 
-1. [Download XOutput](https://github.com/csutorasa/XOutput/releases) and extract it.
-2. Connect your steering wheel to your PC via USB. Confirm it appears in XOutput:
+1. Attach steering wheel to tabletop, tighten knobs on top of base.
+2. Plug the 4-pin connector of the pedals' cable into the steering wheel base.
+TODO: picture here
+3. Plug the power cord connector into the base of the steering wheel.
+4. Connect your steering wheel to your PC via USB. Once connected, gently turn the wheel **fully left and right** to calibrate its range before continuing.
+TODO: GIF here
+
+**Note:** The wheel may move or self-center when first powered on, this is normal. 
+
+<div class="step">
+    <h3>Step 2: Configure XOutput</h3>
+</div>
+
+1. [Download and install ViGEmBus](https://github.com/nefarius/ViGEmBus/releases).
+2. [Download XOutput](https://github.com/csutorasa/XOutput/releases), extract it, and run the executable.
+3. Confirm that your steering wheel appears in XOutput once connected:
     <p align="center" style="margin: 1rem 0;">
         <img src="https://github.com/user-attachments/assets/266e999f-0dd9-47b8-8617-624b4c483efb" width="450">
     </p>
-3. In XOutput, click on _Edit_ and map your wheel's axes and buttons to XInput (Xbox controller format) according to your preference. You can find my custom configuration below as reference:
+4. Click on _Edit_, and map your wheel's axes and buttons to XInput (Xbox controller format) according to your preference. You can use my custom configuration below as a reference:
     ```ini
     [Logitech WingMan Formula Force GP USB(<your_UUID>)]
     SelectedDPad=-1
@@ -60,49 +74,32 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
     L2=Axis2,55,24,0
     R2=Axis2,50,84,0
     ```
-4. Test the mapping to ensure all buttons and axes respond correctly.
-
-<div class="step">
-    <h3>Step 2: Set Up DS4Emulator</h3>
-</div>
-
-1. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator).
-2. Launch DS4Emulator and select the XInput device created by XOutput.
-3. Configure the DS4Emulator profile as needed. Your wheel will now appear as a PS4 controller to Windows.
+5. Once you're happy with your configuration, click on _Start_.
 
 <div class="step">
     <h3>Step 3: Patch RemotePlay</h3>
 </div>
 
-1. [Download RemotePlay Version Patcher](https://github.com/streamingtools/remoteplay-version-patcher).
-2. [Download and install RemotePlay v5.5.0.8250](https://remoteplay.dl.playstation.net/remoteplay/lang/en/index.html).
-3. Use the Version Patcher to enable auto-connect (no need to manually enter a code).
+1. [Download and install RemotePlay v5.5.0.8250](https://remoteplay.dl.playstation.net/remoteplay/lang/en/index.html).
+2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch RemotePlay to the latest version.
+
+The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new code every time.
 
 <div class="step">
     <h3>Step 4: Connect Everything</h3>
 </div>
 
-1. Start XOutput and DS4Emulator, confirming your wheel is detected and mapped.
-2. Launch the patched RemotePlay app.
-3. Log in with your PlayStation Network account and connect to your PS4.
-4. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel.
+1. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator/releases).
+2. Turn-on your Playstation 4, and start your favorite racing game.
+3. Launch the patched RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
+4. Once in-game, run the DS4Emulator executable. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
 
-TODO: insert GIF here of PS4 controlled by wheel
+**Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
 
 <div class="step">
     <h3>Step 5: Play!</h3>
 </div>
 
-1. Start your favorite racing game on the PS4 via RemotePlay.
-2. Enjoy driving with your Logitech WingMan Formula Force GP wheel!
+Enjoy driving with your Logitech WingMan Formula Force GP wheel! 🏁
 
-TODO: insert GIF here of gameplay
-
----
-
-**Troubleshooting Tips:**
-- If buttons or axes do not respond, check your mappings in XOutput and DS4Emulator.
-- Ensure only one XInput device is active to avoid conflicts.
-- If RemotePlay does not recognize the controller, restart all applications and reconnect your devices.
-
-**Congratulations!** You can now use your classic PC steering wheel to play PS4 games. 🏁
+https://github.com/user-attachments/assets/a00f45bd-9882-45d7-8038-712bad51fbfa
