@@ -19,7 +19,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
- - 📡 PS RemotePlay v5.5 for Windows (search for "_Reddit PS RemotePlay v5.5_" to find a link)
+ - 📡 PS RemotePlay v5.5 for Windows (search for "_Reddit PS RemotePlay v5.5_" to find a download link)
  - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
 # Step-by-Step Guide
