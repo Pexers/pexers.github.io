@@ -88,14 +88,15 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 1. Download and install PS RemotePlay v5.5 (recommended). You can usually find a download link in online forums, just search for "_Reddit PS RemotePlay v5.5_". Earlier versions should still work, but may require extra manual steps. The version I use is: `v5.5.0.8250`
 2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch PS RemotePlay to the latest version.
 
-The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new code every time.
+The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new numeric code every time.
 
 <div class="step">
     <h3>Step 4: Connect Everything</h3>
 </div>
 
 1. Turn-on your Playstation 4, and start your favorite racing game.
-2. Launch the patched PS RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
+2. Launch the patched PS RemotePlay app.
+    - The first time you run it, you may be prompted to log in with your PlayStation Network account. You'll then need to manually connect to your PlayStation 4 using a numeric code. On your PS4, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
 3. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator/releases).
 4. Once in-game, run the DS4Emulator executable. PS RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
 
