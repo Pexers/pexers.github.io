@@ -16,8 +16,8 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 
  - 🕹️ Logitech WingMan Formula Force GP (or similar PC wheel)
  - 🖥️ Windows PC
- - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
+ - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
  - 📡 PS RemotePlay v5.5 for Windows (recommended version)
  - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
@@ -94,16 +94,16 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
     <h3>Step 4: Connect Everything</h3>
 </div>
 
-1. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator/releases).
-2. Turn-on your Playstation 4, and start your favorite racing game.
-3. Launch the patched PS RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
-4. Once in-game, run the DS4Emulator executable. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
+1. Turn-on your Playstation 4, and start your favorite racing game.
+2. Launch the patched PS RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
+3. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator/releases).
+4. Once in-game, run the DS4Emulator executable. PS RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width=600">
+    <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width="600">
 </p>
 
-**Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
+**Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use PS Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
 
 <div class="step">
     <h3>Step 5: Race! 🏁</h3>
