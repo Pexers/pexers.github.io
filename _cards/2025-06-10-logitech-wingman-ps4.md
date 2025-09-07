@@ -30,8 +30,8 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 
 1. Attach steering wheel to tabletop, tighten knobs on top of base.
 2. Plug the 4-pin connector of the pedals' cable into the steering wheel base.
-    <p align="center">
-    <img src="https://github.com/user-attachments/assets/f9e90f7a-c585-4478-bd52-039212b135ff" width="200">
+    <p align="center" style="margin: 1rem 0;">
+        <img src="https://github.com/user-attachments/assets/f9e90f7a-c585-4478-bd52-039212b135ff" width="200">
     </p>
 3. Plug the power cord connector into the base of the steering wheel.
 4. Connect your steering wheel to your PC via USB. Once connected, gently turn the wheel **fully left and right** to calibrate its range before continuing.
@@ -84,6 +84,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 <div class="step">
     <h3>Step 3: Patch RemotePlay</h3>
 </div>
+
 1. Download and install RemotePlay v5.5. You can usually find a download link in online forums, just search for "_Reddit RemotePlay v5.5_". The version I use is `v5.5.0.8250`.
 2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch RemotePlay to the latest version.
 
@@ -97,6 +98,10 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
 2. Turn-on your Playstation 4, and start your favorite racing game.
 3. Launch the patched RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
 4. Once in-game, run the DS4Emulator executable. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width="500">
+</p>
 
 **Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
 
