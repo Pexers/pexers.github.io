@@ -30,10 +30,15 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 
 1. Attach steering wheel to tabletop, tighten knobs on top of base.
 2. Plug the 4-pin connector of the pedals' cable into the steering wheel base.
-TODO: picture here
+    <p align="center">
+    <img src="https://github.com/user-attachments/assets/f9e90f7a-c585-4478-bd52-039212b135ff" width="200">
+    </p>
 3. Plug the power cord connector into the base of the steering wheel.
 4. Connect your steering wheel to your PC via USB. Once connected, gently turn the wheel **fully left and right** to calibrate its range before continuing.
-TODO: GIF here
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/29a7dabb-cd21-4c94-84cd-c9e19f98eddf" width="200">
+</p>
 
 **Note:** The wheel may move or self-center when first powered on, this is normal. 
 
@@ -97,9 +102,10 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
 **Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
 
 <div class="step">
-    <h3>Step 5: Play!</h3>
+    <h3>Step 5: Play! 🏁</h3>
 </div>
 
-Enjoy driving with your Logitech WingMan Formula Force GP wheel! 🏁
-
-https://github.com/user-attachments/assets/a00f45bd-9882-45d7-8038-712bad51fbfa
+<p align="center">
+    <strong>Gran Turismo Sport Test Drive</strong><br>
+    <iframe width="480" height="270" src="https://github.com/user-attachments/assets/a00f45bd-9882-45d7-8038-712bad51fbfa" frameborder="0" allowfullscreen></iframe>
+</p>
