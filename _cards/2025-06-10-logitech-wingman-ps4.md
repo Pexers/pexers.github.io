@@ -19,8 +19,8 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
- - 📡 RemotePlay v5.5 for Windows (search for "_Reddit RemotePlay v5.5_" to find a link)
- - ⚙️ [RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
+ - 📡 PS RemotePlay v5.5 for Windows (search for "_Reddit PS RemotePlay v5.5_" to find a link)
+ - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
 # Step-by-Step Guide
 
@@ -85,8 +85,8 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
     <h3>Step 3: Patch RemotePlay</h3>
 </div>
 
-1. Download and install RemotePlay v5.5. You can usually find a download link in online forums, just search for "_Reddit RemotePlay v5.5_". The version I use is `v5.5.0.8250`.
-2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch RemotePlay to the latest version.
+1. Download and install PS RemotePlay v5.5. You can usually find a download link in online forums, just search for "_Reddit PS RemotePlay v5.5_". The version I use is: `v5.5.0.8250`
+2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch PS RemotePlay to the latest version.
 
 The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new code every time.
 
@@ -96,7 +96,7 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
 
 1. [Download DS4Emulator](https://github.com/r57zone/DualShock4-emulator/releases).
 2. Turn-on your Playstation 4, and start your favorite racing game.
-3. Launch the patched RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
+3. Launch the patched PS RemotePlay app. The first time you run it, it may ask you to log in with your PlayStation Network account. You'll have to manually connect to your PlayStation 4 using a code. To do this, go to _Settings_ > _Remote Play Connection Settings_ > _Add Device_ and follow the on-screen instructions.
 4. Once in-game, run the DS4Emulator executable. RemotePlay should recognize DS4Emulator as a genuine DualShock 4 controller, allowing you to play with your wheel!
 
 <p align="center">
