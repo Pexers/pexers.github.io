@@ -25,7 +25,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 # Step-by-Step Guide
 
 <div class="step">
-    <h3>Step 1: Install the Steering Wheel and Pedals</h3>
+    <h3>Step 1: Set up the Steering Wheel and Pedals</h3>
 </div>
 
 1. Attach steering wheel to tabletop, tighten knobs on top of base.
