@@ -19,7 +19,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - ⚙️ [XOutput](https://github.com/csutorasa/XOutput/releases) (converts DirectInput to XInput)
  - ⚙️ [ViGEmBus](https://github.com/nefarius/ViGEmBus/releases) (virtual gamepad emulation bus driver)
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
- - 📡 [RemotePlay v5.5.0.8250](https://remoteplay.dl.playstation.net/remoteplay/lang/en/index.html) for Windows
+ - 📡 RemotePlay v5.5 for Windows (search for "_Reddit RemotePlay v5.5_" to find a link)
  - ⚙️ [RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
 # Step-by-Step Guide
@@ -84,8 +84,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
 <div class="step">
     <h3>Step 3: Patch RemotePlay</h3>
 </div>
-
-1. [Download and install RemotePlay v5.5.0.8250](https://remoteplay.dl.playstation.net/remoteplay/lang/en/index.html).
+1. Download and install RemotePlay v5.5. You can usually find a download link in online forums, just search for "_Reddit RemotePlay v5.5_". The version I use is `v5.5.0.8250`.
 2. [Download the RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases), extract it, and run its executable to patch RemotePlay to the latest version.
 
 The version patcher will enable you to auto-connect to your PlayStation 4 without needing to manually enter a new code every time.
