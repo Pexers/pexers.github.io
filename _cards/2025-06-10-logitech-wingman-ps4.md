@@ -12,8 +12,6 @@ The Logitech WingMan Formula GP series, released on August 30, 2000, are classic
 
 This guide will show you, step by step, how to set up your WingMan Formula Force GP (or any other) steering wheel to work with your PlayStation 4 via Remote Play for input purposes.
 
-**Note:** You should be able to use this same software setup with a PS5, since the console supports DualShock 4 controllers for PS4 games. However, I haven't been able to test this myself.
-
 ### What You'll Need
 
  - 🕹️ Logitech WingMan Formula Force GP (or similar PC wheel)
@@ -23,6 +21,8 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - 🎮 [DualShock4 emulator](https://github.com/r57zone/DualShock4-emulator/releases) (converts XInput to DualShock 4)
  - 📡 PS RemotePlay v5.5 for Windows (recommended version)
  - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
+
+**Note:** You should be able to use this same software setup with a PS5, since the console supports DualShock 4 controllers for PS4 games. However, I haven't been able to test this myself.
 
 # Step-by-Step Guide
 
