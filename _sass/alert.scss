@@ -1,0 +1,52 @@
+// Default neutral colors
+$default-color: #656d76;
+
+$alerts:
+    //class (type), fa-unicode, icon/border color
+    ('note', '\f05a', '#0969da')       // fa-circle-info
+    ('tip', '\f0eb', '#1a7f37')        // fa-lightbulb
+    ('warning', '\f071', '#9a6700')    // fa-triangle-exclamation
+    ('caution', '\f06a', '#cf222e')    // fa-circle-exclamation
+;
+
+.alert {
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.646);
+    page-break-inside: avoid;
+    padding: 0.8rem 0.8rem;
+    margin-bottom: 1rem;
+    border-left: .25em solid $default-color;
+    width: 100%;
+}
+
+.alert .alert-title {
+    font-weight: 500;
+    line-height: 0.2;
+}
+
+.alert-title::before {
+    margin-right: .5rem;
+    display: inline-block;
+    text-align: center;
+}
+
+@each $name, $icon, $icon-color in $alerts {
+    .alert.#{$name} {
+        border-left-color: #{$icon-color};
+        
+        .alert-title {
+            color: #{$icon-color};
+        }
+        
+        .alert-title::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "#{$icon}";
+            margin-right: .5rem;
+            color: #{$icon-color};
+            display: inline-block;
+            width: 1.2rem;
+            text-align: center;
+        }
+    }
+}

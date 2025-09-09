@@ -22,7 +22,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
  - 📡 PS RemotePlay v5.5 for Windows (recommended version)
  - ⚙️ [PS RemotePlay Version Patcher](https://github.com/xeropresence/remoteplay-version-patcher/releases)
 
-**Note:** You should be able to use this same software setup with a PS5, since the console supports DualShock 4 controllers for PS4 games. However, I haven't been able to test this myself.
+{% include alert.html type="note" body="You should be able to use this same software setup with a PS5, since the console supports DualShock 4 controllers for PS4 games. However, I haven't been able to test this myself." %}
 
 # Step-by-Step Guide
 
@@ -42,7 +42,7 @@ This guide will show you, step by step, how to set up your WingMan Formula Force
   <img src="https://github.com/user-attachments/assets/29a7dabb-cd21-4c94-84cd-c9e19f98eddf" width="200">
 </p>
 
-**Note:** The wheel may move or self-center when first powered on, this is normal. 
+{% include alert.html type="note" body="The wheel may move or self-center when first powered on, this is normal." %}
 
 <div class="step">
     <h3>Step 2: Configure XOutput</h3>
@@ -106,7 +106,8 @@ The version patcher will enable you to auto-connect to your PlayStation 4 withou
     <img src="https://github.com/user-attachments/assets/af9c09d3-5db9-4319-b938-dbdc832737d6" width="600">
 </p>
 
-**Note:** For the best gameplay experience, connect your PS4 directly to your display via HDMI and use PS Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable.
+
+{% include alert.html type="tip" body="For the best gameplay experience, connect your PS4 directly to your display via HDMI and use PS Remote Play only for controller input. This minimizes display lag compared to streaming. For optimal stability, connect both your PS4 and PC to your network via ethernet cable." %}
 
 <div class="step">
     <h3>Step 5: Race! 🏁</h3>

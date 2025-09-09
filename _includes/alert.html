@@ -1,0 +1,7 @@
+{% if include.type.size > 0 and include.body.size > 0 %}
+{% assign types = "note, tip, warning, caution" | split: ", " %}
+<div class="alert {{ include.type }}">
+    <p class="alert-title">{{ include.type | capitalize }}</p>
+    {{ include.body }}
+</div>
+{% endif %}
