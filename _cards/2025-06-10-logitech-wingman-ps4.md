@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Connect Logitech WingMan Formula Force GP to PlayStation 4
-description: Connect your Logitech WingMan Formula Force GP (or any other) steering wheel to your PlayStation 4.
+title: Play PlayStation 4 racing games using ANY steering wheel
+description: Connecting the Logitech WingMan Formula Force GP (or any other) steering wheel to a PlayStation 4.
 date: 2025-06-10
 image: https://github.com/user-attachments/assets/87c196e9-2211-4e84-a7c0-a10c570b6eef
 ---
 
 # Introduction
 
-The Logitech WingMan Formula GP series, released on August 30, 2000, are classic PC racing wheels that offer a solid driving experience but lack native PlayStation 4 support. Fortunately, with a few lightweight and **free software** tools, you can bridge this gap and enjoy your favorite PS4 racing games using any wheel, with no expensive adapters required.
+The Logitech WingMan Formula GP series, released on August 30, 2000, is a classic PC racing wheel that offers a solid driving experience but lacks native PlayStation 4 support. Fortunately, with a few lightweight and **free software** tools, you can bridge this gap and enjoy your favorite PS4 racing games with no expensive adapters required.
 
-This guide will show you, step by step, how to set up your WingMan Formula Force GP (or any other) steering wheel to work with your PlayStation 4 via Remote Play for input purposes.
+This guide will show you, step by step, how to set up **ANY** steering wheel to work with your PlayStation 4 via Remote Play for input purposes.
 
 ### What You'll Need
 
